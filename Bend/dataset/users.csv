@@ -1,0 +1,11 @@
+user_id,name,vehicle_number,role,entry_time,exit_time
+U001,Rahul,KA01AB1234,Student,09:00,10:00
+U002,Priya,KA02XY5678,Faculty,09:15,11:00
+U003,Amit,DL09PQ1122,Student,09:30,10:30
+U004,Neha,MH12CD9988,Faculty,10:00,11:45
+U005,Rohan,KA03LM4455,Student,10:15,11:15
+U006,Anjali,TS08JK7788,Faculty,10:30,12:00
+U007,Kunal,GJ05RT8899,Student,10:45,11:30
+U008,Sneha,UP14AB6655,Student,11:00,12:00
+U009,Arjun,KA09MM2244,Faculty,11:15,12:30
+U010,Pooja,MH20XY9090,Student,11:30,12:45
