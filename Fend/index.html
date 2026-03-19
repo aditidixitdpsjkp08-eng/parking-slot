@@ -12,18 +12,23 @@
   <div class="card">
     <p id="status">Checking parking...</p>
   </div>
+<div class="card">
 
-  <div class="card">
-    <input id="userId" placeholder="Enter Parking Slot To Be Selected  (U001 - U010)">
-    
-    <select id="duration">
-      <option value="30">30 Minutes</option>
-      <option value="60">1 Hour</option>
-      <option value="120">2 Hours</option>
-    </select>
+  <div class="input-wrap">
+    <input id="userId" placeholder="Enter Parking Slot To Be Selected (U001 - U010)">
+  </div>
 
+  <select id="duration">
+    <option value="30">30 Minutes</option>
+    <option value="60">1 Hour</option>
+    <option value="120">2 Hours</option>
+  </select>
+
+  <div class="btn-wrap">
     <button onclick="generateQR()">Generate QR</button>
   </div>
+
+</div>
 
   <div class="card">
     <h3>Your QR Code</h3>

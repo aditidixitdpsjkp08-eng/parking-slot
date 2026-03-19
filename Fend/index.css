@@ -9,10 +9,35 @@ body {
   margin: auto;
   padding-top: 40px;
 }
-.container h1{
-  text-align:center;
-  color:rgb(239, 236, 230);
-  font-size:40px;
+.container h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 0;
+
+  animation: 
+    typing 3s steps(30, end) forwards,
+    blink 0.7s 4,
+    removeCursor 0s 3s forwards;  /* 👈 remove after typing */
+}
+
+
+/* typing */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+/* blinking */
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+
+/* remove cursor */
+@keyframes removeCursor {
+  to { border-right: none; }
 }
 .card {
   background: #0c0d0d;
@@ -25,7 +50,8 @@ body {
 input, select, button {
   width: 97%;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
+  border-radius:20px;
 }
 .card>#userId{
 
@@ -34,12 +60,58 @@ input, select, button {
 button {
   background: #1feb3d;
   border: none;
-  border-radius: 6px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
 img {
   width: 180px;
   margin-top: 15px;
+}
+
+/* ========================= */
+/* 💜 ROTATING BORDER EFFECT */
+/* ========================= */
+
+input, select, button {
+  width: 97%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: 3px solid transparent;
+
+  /* background trick */
+  background:
+    linear-gradient(#0c0d0d, #0c0d0d) padding-box,
+    linear-gradient(90deg, purple, violet, purple) border-box;
+
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+
+  color: white;
+
+  animation: borderMove 3s linear infinite;
+}
+
+select {
+  background-color: #0c0d0d;
+  color: white;
+}
+
+option {
+  background-color: #0c0d0d;
+  color: white;
+}
+
+/* ========================= */
+/* 🔄 ANIMATION */
+/* ========================= */
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
 }
 
